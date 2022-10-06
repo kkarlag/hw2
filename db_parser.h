@@ -62,7 +62,6 @@ private:
 
 };
 
-
 /**
  * Product section parser.  Uses separate ProductParsers
  *  to parse each type of product

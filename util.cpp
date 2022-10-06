@@ -15,17 +15,33 @@ std::string convToLower(std::string src)
     to a set of words based on the criteria given in the assignment **/
 std::set<std::string> parseStringToWords(string rawWords)
 {
-
-
-
-
-
-
-
-
-
-
+  int length= rawWords.length();
+  set<string> set1; 
+  string subStr = "";
+   
+  for(int i =0; i<=length; i++)
+  {
+    char c= rawWords[i]; 
+    if(ispunct(c)|| isspace(c)) //true it is punctuation
+    {
+      if(subStr.length()>=2)//adding if substring is more than 2 (qualifies as a keyword)
+      {
+        set1.insert(convToLower(subStr)); //dont want it to be case sensitive
+        subStr=""; //make empty string if you already inserted
+      }
+    }
+    else{
+      subStr+=rawWords[i]; //keep adding to substring so that eventually greater than 2
+    }
+  }
+  //in the case that it is upper case
+  if(subStr.length()>=2)
+  {
+    set1.insert(convToLower(subStr));
+  }
+  return set1; 
 }
+
 
 /**************************************************
  * COMPLETED - You may use the following functions
