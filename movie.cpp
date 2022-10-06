@@ -5,7 +5,7 @@
 
 
 //constructor
-Movie::Movie(std::string category, std::string name, std::string genre, std::string rating, double price, int qty) 
+Movie::Movie(std::string category, std::string name, double price, int qty, std::string genre, std::string rating) 
 : Product("clothing",name, price, qty){
   rating_=rating;
   genre_=genre;
