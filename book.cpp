@@ -5,6 +5,7 @@
 using namespace std;
 
 //constructor
+
 Book::Book(std::string category, std::string name, double price, int qty, std::string ISBN, std::string author) 
 : Product("book",name, price, qty){
   ISBN_=ISBN;
@@ -38,3 +39,5 @@ std::string Book::getISBN() {
 std::string Book::getAuthor() {
 	return author_;
 }
+
+

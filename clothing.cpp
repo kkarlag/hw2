@@ -5,7 +5,7 @@
 using namespace std;
 
 //constructor
-Clothing::Clothing(std::string category, std::string name, double price, int qty, std::string size, std::string brand) 
+Clothing::Clothing(std::string category, std::string name, std::string size, std::string brand, double price, int qty) 
 : Product("clothing",name, price, qty){
   size_=size;
   brand_=brand;
