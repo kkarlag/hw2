@@ -167,7 +167,7 @@ void MyDataStore::dump(std::ostream& ofile)
     {
       products[i]->dump(ofile);
     }
-    ofile << "</products" << std::endl;
+    ofile << "</products>" << std::endl;
 
     ofile <<"<users>"<< std::endl;
     //outputting user info
@@ -177,5 +177,5 @@ void MyDataStore::dump(std::ostream& ofile)
       it->second-> dump(ofile); 
     }
 
-    ofile << "</users" << std::endl;
+    ofile << "</users>" << std::endl;
 }

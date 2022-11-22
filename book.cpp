@@ -24,13 +24,13 @@ std::set<string> Book::keywords() const{
   return keyWords; 
 }
 string Book::displayString() const{
-  string output= name_ +"\n"+ "Author: " +author_+" ISBN: "+ISBN_+" "+to_string(price_)+" "+ to_string(qty_)+" left."+"\n";
+  string output= name_ +"\n"+ "Author: " +author_+" ISBN: "+ISBN_+"\n"+to_string(price_)+" "+ to_string(qty_)+" left."+"\n";
   return output;
 }
 void Book::dump(ostream& os) const{
   os << category_ << "\n" << name_ << "\n" 
   << price_ << "\n" << qty_ << "\n"<<
-  author_<< "\n"<< ISBN_ <<endl;
+  ISBN_<< "\n"<< author_ <<endl;
   //author and isbn
 }
 std::string Book::getISBN() {

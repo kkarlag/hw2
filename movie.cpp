@@ -6,7 +6,7 @@
 
 //constructor
 Movie::Movie(std::string category, std::string name, double price, int qty, std::string genre, std::string rating) 
-: Product("clothing",name, price, qty){
+: Product("movie",name, price, qty){
   rating_=rating;
   genre_=genre;
 }
@@ -24,7 +24,7 @@ std::set<std::string> Movie::keywords() const{
 }
 std::string Movie::displayString() const{
   string output= name_ +"\n"+ "Genre: " +genre_+" Rating: "+rating_+
-  " "+to_string(price_)+" "+ to_string(qty_)+" left."+"\n";
+  "\n"+to_string(price_)+" "+ to_string(qty_)+" left."+"\n";
   return output;
 }
 void Movie::dump(std::ostream& os) const{

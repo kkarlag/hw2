@@ -23,7 +23,7 @@ std::set<std::string> Clothing::keywords() const{
 }
 std::string Clothing::displayString() const{
 string output= name_ +"\n"+ "Size: " +size_+" Brand: "+brand_+
-" "+to_string(price_)+" "+ to_string(qty_)+" left."+"\n";
+"\n"+to_string(price_)+" "+ to_string(qty_)+" left."+"\n";
 return output;
 }
 void Clothing::dump(ostream& os) const{
